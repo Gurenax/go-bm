@@ -23,6 +23,18 @@ func (b *Benchmark) EndBenchmark() {
 	b.duration = b.endTime.Sub(b.startTime)
 }
 
+// Display the recorded duration in nanoseconds
+func (b *Benchmark) DisplayResultInNanoseconds(label string) {
+	durationInNs := float64(b.duration.Nanoseconds())
+	fmt.Printf("%v %fns\n", label, durationInNs)
+}
+
+// Display the recorded duration in microseconds
+func (b *Benchmark) DisplayResultInMicroseconds(label string) {
+	durationInUs := float64(b.duration.Nanoseconds()) * 0.001
+	fmt.Printf("%v %fµs\n", label, durationInUs)
+}
+
 // Display the recorded duration in milliseconds
 func (b *Benchmark) DisplayResultInMilliseconds(label string) {
 	durationInMs := float64(b.duration.Nanoseconds()) * 0.000001
@@ -32,5 +44,5 @@ func (b *Benchmark) DisplayResultInMilliseconds(label string) {
 // Display the recorded duration in seconds
 func (b *Benchmark) DisplayResultInSeconds(label string) {
 	durationInSecs := float64(b.duration.Nanoseconds()) * 0.000000001
-	fmt.Printf("%v %fseconds\n", label, durationInSecs)
+	fmt.Printf("%v %fs\n", label, durationInSecs)
 }
