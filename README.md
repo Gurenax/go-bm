@@ -21,9 +21,9 @@ func main() {
   b.EndBenchmark()
   
   // Displaying the Result
-  b.DisplayResultInNanoseconds("Benchmark in Nanoseconds:") // Benchmark in Nanoseconds: 1720.000000ns
-  b.DisplayResultInMicroseconds("Benchmark in Microseconds:") // Benchmark in Microseconds: 1.720000µs
-  b.DisplayResultInMilliseconds("Benchmark in Milliseconds:") // Benchmark in Milliseconds: 0.001720ms
-  b.DisplayResultInSeconds("Benchmark in Seconds:") // Benchmark in Seconds: 0.000002s
+  b.DurationInNanoseconds("Duration in Nanoseconds:") // Duration in Nanoseconds: 1720.000000ns
+  b.DurationInMicroseconds("Duration in Microseconds:") // Duration in Microseconds: 1.720000µs
+  b.DurationInMilliseconds("Duration in Milliseconds:") // Duration in Milliseconds: 0.001720ms
+  b.DurationInSeconds("Duration in Seconds:") // Duration in Seconds: 0.000002s
 }
 ```
