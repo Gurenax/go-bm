@@ -1,4 +1,4 @@
-# Go Benchmark
+# Go BM (Benchmark)
 Super simple tool for measuring run time of your go code
 
 ## Example
@@ -6,12 +6,12 @@ Super simple tool for measuring run time of your go code
 package main
 
 import (
-  benchmark "github.com/Gurenax/go-benchmark"
+  bm "github.com/Gurenax/go-bm"
 )
 
 func main() {
   // Starting the Benchmark
-  b := benchmark.Benchmark{}
+  b := bm.Benchmark{}
   b.StartBenchmark()
   
   // Your function
