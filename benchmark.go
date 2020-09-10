@@ -13,12 +13,12 @@ type BM struct {
 }
 
 // Start a new benchmark
-func (b *BM) StartBenchmark() {
+func (b *BM) Start() {
 	b.startTime = time.Now()
 }
 
 // End the benchmark then record the duration
-func (b *BM) EndBenchmark() {
+func (b *BM) End() {
 	b.endTime = time.Now()
 	b.duration = b.endTime.Sub(b.startTime)
 }
