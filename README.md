@@ -11,7 +11,7 @@ import (
 
 func main() {
   // Starting the Benchmark
-  b := bm.Benchmark{}
+  b := bm.BM{}
   b.StartBenchmark()
   
   // Your function
