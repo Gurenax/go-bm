@@ -12,13 +12,13 @@ import (
 func main() {
   // Starting the Benchmark
   b := bm.BM{}
-  b.StartBenchmark()
+  b.Start()
   
   // Your function
   result := calculateSomething()
   
   // Ending the Benchmark
-  b.EndBenchmark()
+  b.End()
   
   // Displaying the Result
   b.DurationInNanoseconds("Duration in Nanoseconds:") // Duration in Nanoseconds: 1720.000000ns
