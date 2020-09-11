@@ -26,7 +26,7 @@ func main() {
   // Ending the Benchmark
   b.End()
   
-  // Displaying the Result
+  // Displaying the Duration
   b.DurationInNanoseconds("Duration in Nanoseconds:") // Duration in Nanoseconds: 1720.000000ns
   b.DurationInMicroseconds("Duration in Microseconds:") // Duration in Microseconds: 1.720000µs
   b.DurationInMilliseconds("Duration in Milliseconds:") // Duration in Milliseconds: 0.001720ms
