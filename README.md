@@ -3,8 +3,7 @@ Super simple tool for measuring run time of your go code
 <br><br>
 
 ## Why Go BM?
-If you need a library that can quickly benchmark your code without the need to deal with the `time` library from scratch.<br>
-It is very simple, yet I find myself using it a lot on my personal projects.
+If you need a library that can quickly benchmark your code without the need to deal with the `time` library from scratch. It is very simple, yet I find myself using it a lot on my personal projects.
 <br><br>
 
 ## Example
