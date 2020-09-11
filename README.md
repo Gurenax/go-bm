@@ -1,5 +1,11 @@
 # Go BM (Benchmark)
 Super simple tool for measuring run time of your go code
+<br><br>
+
+## Why Go BM?
+If you need a library that could quickly benchmark your code without the need to code it from scratch.<br>
+It is very simple, yet I find myself using it a lot on my personal projects.
+<br><br>
 
 ## Example
 ```go
