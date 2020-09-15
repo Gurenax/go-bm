@@ -176,3 +176,52 @@ func TestBM_DurationInMicroseconds(t *testing.T) {
 		})
 	}
 }
+
+func TestBM_DurationInMilliseconds(t *testing.T) {
+	var givenDuration time.Duration = 1000000000
+
+	type fields struct {
+		startTime time.Time
+		endTime   time.Time
+		duration  time.Duration
+	}
+	type args struct {
+		label string
+	}
+	tests := []struct {
+		name   string
+		fields fields
+		args   args
+	}{
+		{
+			name: "Executes successfully",
+			fields: fields{
+				duration: givenDuration,
+			},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			mockStdout := os.Stdout
+			r, w, _ := os.Pipe()
+			os.Stdout = w
+
+			b := &BM{
+				startTime: tt.fields.startTime,
+				endTime:   tt.fields.endTime,
+				duration:  tt.fields.duration,
+			}
+			b.DurationInMilliseconds(tt.args.label)
+
+			w.Close()
+			out, _ := ioutil.ReadAll(r)
+			os.Stdout = mockStdout
+
+			actualResult := strings.Trim(string(out), " \n")
+			expectedResult := "1000.000000ms"
+			if actualResult != expectedResult {
+				t.Errorf("Expected %v, got %v", expectedResult, actualResult)
+			}
+		})
+	}
+}
